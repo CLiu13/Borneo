@@ -90,7 +90,7 @@
                 </tr>
 
                 <?php
-                require "db/connect.php";
+                require "../db/connect.php";
                 $sql = ("SELECT note FROM note");
                 $result = $conn->query($sql);
 
