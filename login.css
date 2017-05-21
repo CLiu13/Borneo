@@ -12,3 +12,7 @@ body{
   display:inline-block;
   vertical-align: middle;
 }
+
+div{
+  text-align: center;
+}
