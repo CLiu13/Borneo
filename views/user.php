@@ -65,7 +65,6 @@
                 <th><abbr title="Position">Pos</abbr></th>
                 <th>Reminder</th>
                 <th>Date and Time</th>
-                <th>How Often</th>
                 <th>Tags</th>
                 </tr>
             </thead>
@@ -74,7 +73,6 @@
                 <th><abbr title="Position">Pos</abbr></th>
                 <th>Reminder</th>
                 <th>Date and Time</th>
-                <th>How Often</th>
                 <th>Tags</th>
                 </tr>
             </tfoot>
@@ -85,7 +83,6 @@
                 <th>Ex</th> <!--Item Number-->
                 <th>Hello World!!!</th> <!--Reminder-->
                 <th>2017-05-20 12:00:00</th> <!--Date and Time-->
-                <th>Yearly</th> <!--How Often-->
                 <th><span class="tag is-dark">Example</span><span class="tag is-dark">Tags</span></th> <!--Tags-->
                 </tr>
 
