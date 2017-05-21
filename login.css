@@ -1,0 +1,14 @@
+body{
+    background-image: url("Assets/Background.jpg");
+    background-repeat: no-repeat;
+}
+.center {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.inline, .inline > * {
+  display:inline-block;
+  vertical-align: middle;
+}
