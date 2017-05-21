@@ -16,14 +16,16 @@
 
   <?php
     require "../db/connect.php";
+    session_start();
     $reminder = $_REQUEST['reminder'];
     $tag = $_REQUEST['tag'];
-    $date = $_REQUEST['date'];
+    $date = $_REQUEST['date']." ".$_REQUEST['time'];
     $add_sql = "INSERT INTO note(note, tag, lastmod)
                 VALUES ('$reminder', '$tag', '$date')";
     $request_sql = $conn->query($add_sql);
 
     if ($request_sql) {
+      var_dump($date);
       header("Location: user.php"); /* Redirect browser */
       exit();
     }

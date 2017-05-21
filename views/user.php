@@ -38,10 +38,15 @@
 
         <!-- This "nav-menu" is hidden on mobile -->
         <!-- Add the modifier "is-active" to display it on mobile -->
-
         <div class="nav-right nav-menu">
+        <?php
+        session_start();
+        echo "Welcome, ".$_SESSION['username']."   / ";
+        echo "/       Search: ";
+        ?>
+        <p>       </p>
           <form action="search.php" method="post">
-            <input type="text" name="tag" placeholder="Search by Tag">
+            <input type="text" name="tag" placeholder="Search by Tag" style="margin-left:5px";>
           </form>
             <a class="nav-item">
             Home
@@ -51,8 +56,6 @@
             Blog
           </button>
           </form>
-
-
             <!-- <div class="nav-item ">
             <div class="field is-grouped">
                 <p class="control">
@@ -144,6 +147,7 @@
                     <input class="input is-small" type="text" name="tag" placeholder="tag">
                 </p>
                 <input type="date" name="date">
+<input type="time" name="time">
             </div>
         </div>
         <footer class="card-footer">
@@ -154,5 +158,37 @@
         </div>
         <!-- <center><a class="button is-dark">Add Remind</a></center> -->
     </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+  if (!Notification) {
+    alert('Desktop notifications not available in your browser. Try Chromium.');
+    return;
+  }
+
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+});
+
+function notifyMe() {
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+  else {
+    var notification = new Notification('Notification title', {
+      icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+      body: "Pick Up Coffee",
+    });
+
+    notification.onclick = function () {
+      window.open("http://stackoverflow.com/a/13328397/1269037");
+    };
+
+  }
+
+}
+
+setTimeout(function(){
+    notifyMe();
+}, 120000);
+</script>
 </body>
 </html>
