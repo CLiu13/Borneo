@@ -107,7 +107,7 @@
                     <th>";
                     echo $row['lastmod'];
                     echo"</th>
-                    <th><span class="tag is-dark">";
+                    <th><span class='tag is-dark'>";
                     echo $row['tag'];
                     echo"</span></th>
                     </tr>";
