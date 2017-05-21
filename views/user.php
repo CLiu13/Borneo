@@ -8,7 +8,7 @@
 <body>
 
 <!--Navbar-->
-    <nav class="nav">
+    <nav class="nav has-shadow">
         <div class="nav-left">
             <a class="nav-item">
             <img src="../assets/borneo.jpg" alt="Borneo logo">
