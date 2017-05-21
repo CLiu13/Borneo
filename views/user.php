@@ -120,6 +120,24 @@
 
 <!--Add Reminder Button-->
     <div>
+        <div class="card">
+        <header class="card-header">
+            <p class="card-header-title">
+            Component
+            </p>
+        </header>
+        <div class="card-content">
+            <div class="field">
+                <p class="control">
+                    <input class="input is-small" type="text" placeholder="Small input">
+                </p>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item">Save</a>
+            <a class="card-footer-item">Cancel</a>
+        </footer>
+        </div>
         <center><a class="button is-dark">Add Remind</a></center>
     </div>
 </body>
