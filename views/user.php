@@ -38,15 +38,20 @@
 
         <!-- This "nav-menu" is hidden on mobile -->
         <!-- Add the modifier "is-active" to display it on mobile -->
-        <form action="https://youtu.be/dQw4w9WgXcQ">
+
         <div class="nav-right nav-menu">
+          <form action="search.php" method="post">
+            <input type="text" name="tag" placeholder="Search by Tag">
+          </form>
             <a class="nav-item">
             Home
             </a>
+            <form action="https://youtu.be/dQw4w9WgXcQ">
             <button type="submit" class="nav-item">
             Blog
           </button>
-        </form>
+          </form>
+
 
             <!-- <div class="nav-item ">
             <div class="field is-grouped">
