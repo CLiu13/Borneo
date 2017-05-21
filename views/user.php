@@ -38,13 +38,15 @@
 
         <!-- This "nav-menu" is hidden on mobile -->
         <!-- Add the modifier "is-active" to display it on mobile -->
+        <form action="https://youtu.be/dQw4w9WgXcQ">
         <div class="nav-right nav-menu">
             <a class="nav-item">
             Home
             </a>
-            <a class="nav-item">
+            <button type="submit" class="nav-item">
             Blog
-            </a>
+          </button>
+        </form>
 
             <!-- <div class="nav-item ">
             <div class="field is-grouped">
