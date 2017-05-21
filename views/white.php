@@ -15,19 +15,22 @@
 <body>
 
   <?php
-    require 'db/connect.php';
+    require "../db/connect.php";
     $reminder = $_REQUEST['reminder'];
+    $tag = $_REQUEST['tag'];
+    $date = $_REQUEST['date'];
+    $add_sql = "INSERT INTO note(note, tag, lastmod)
+                VALUES ('$reminder', '$tag', '$date')";
+    $request_sql = $conn->query($add_sql);
 
-    $sql = "INSERT INTO note(note)
-            VALUES ('$reminder')";
-    $result = $conn->query($sql);
-    var_dump($result);
-
-    if ($result) {
-      echo "Reminder saved.";
+    if ($request_sql) {
+      header("Location: user.php"); /* Redirect browser */
+      exit();
     }
   ?>
   <!-- jQuery first, then Bootstrap JS. -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
 </body>
+
+</html>

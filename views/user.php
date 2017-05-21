@@ -46,7 +46,7 @@
             Blog
             </a>
 
-            <div class="nav-item ">
+            <!-- <div class="nav-item ">
             <div class="field is-grouped">
                 <p class="control">
                 <a class="button is-primary">
@@ -54,7 +54,7 @@
                 </a>
                 </p>
             </div>
-            </div>
+            </div> -->
         </div>
     </nav>
 
@@ -80,13 +80,14 @@
             <tbody>
 
                 <!--Item Example-->
-                <tr>
-                <th>Ex</th> <!--Item Number-->
-                <th>Hello World!!!</th> <!--Reminder-->
-                <th>2017-05-20 12:00:00</th> <!--Date and Time-->
-                <th><span class="tag is-dark">Example</span><span class="tag is-dark">Tags</span></th> <!--Tags-->
-                </tr>
+                <!-- <tr>
+                <th>Ex</th>
+                <th>Hello World!!!</th>
+                <th>2017-05-20 12:00:00</th>
+                <th><span class="tag is-dark">Example</span><span class="tag is-dark">Tags</span></th>
+                </tr> -->
 
+                <form action="delete.php" method="post">
                 <?php
                 require "../db/connect.php";
                 $sql = ("SELECT note,lastmod,tag FROM note");
@@ -107,13 +108,13 @@
                     echo"</th>
                     <th><span class='tag is-dark'>";
                     echo $row['tag'];
-                    echo"</span></th>
-                    </tr>";
+                    echo"</span></th>";
+                    echo"<th><button type='submit' name='item' value='".$row['note']."'>Delete</input></th>";
                     $x++;
                 }
                 }
                 ?>
-
+              </form>
             </tbody>
         </table>
     </div>
@@ -123,22 +124,28 @@
         <div class="card">
         <header class="card-header">
             <p class="card-header-title">
-            Component
+            New Reminder
             </p>
         </header>
+        <form action="white.php" method="post">
         <div class="card-content">
             <div class="field">
                 <p class="control">
-                    <input class="input is-small" type="text" placeholder="Small input">
+                    <input class="input is-small" type="text" name="reminder" placeholder="What do you want to remember?">
                 </p>
+                <p class="control">
+                    <input class="input is-small" type="text" name="tag" placeholder="tag">
+                </p>
+                <input type="date" name="date">
             </div>
         </div>
         <footer class="card-footer">
-            <a class="card-footer-item">Save</a>
+            <button type="submit" class="card-footer-item">Save</button>
             <a class="card-footer-item">Cancel</a>
+        </form>
         </footer>
         </div>
-        <center><a class="button is-dark">Add Remind</a></center>
+        <!-- <center><a class="button is-dark">Add Remind</a></center> -->
     </div>
 </body>
 </html>
