@@ -6,13 +6,6 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.css">
 </head>
 <body>
-<!--Notifications-->
-    <div class="notification is-primary">
-    <button class="delete"></button>
-    Primar lorem ipsum dolor sit amet, consectetur
-    adipiscing elit lorem ipsum dolor sit amet,
-    consectetur adipiscing elit
-    </div>
 
 <!--Navbar-->
     <nav class="nav">
@@ -53,7 +46,7 @@
             Blog
             </a>
 
-            <div class="nav-item">
+            <div class="nav-item ">
             <div class="field is-grouped">
                 <p class="control">
                 <a class="button is-primary">
@@ -127,7 +120,7 @@
 
 <!--Add Reminder Button-->
     <div>
-        <a class="button is-dark">Add Remind</a>
+        <center><a class="button is-dark">Add Remind</a></center>
     </div>
 </body>
 </html>
