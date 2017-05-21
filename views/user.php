@@ -117,6 +117,9 @@
         </table>
     </div>
 
-<!---->
+<!--Add Reminder Button-->
+    <div>
+        <a class="button is-dark">Add Remind</a>
+    </div>
 </body>
 </html>
