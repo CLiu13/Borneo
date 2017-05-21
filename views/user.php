@@ -91,7 +91,7 @@
 
                 <?php
                 require "../db/connect.php";
-                $sql = ("SELECT note FROM note");
+                $sql = ("SELECT note,lastmod,tag FROM note");
                 $result = $conn->query($sql);
 
                 $x = 1;
@@ -104,6 +104,12 @@
                     <th>";
                     echo $row['note'];
                     echo"</th>
+                    <th>";
+                    echo $row['lastmod'];
+                    echo"</th>
+                    <th><span class="tag is-dark">";
+                    echo $row['tag'];
+                    echo"</span></th>
                     </tr>";
                     $x++;
                 }
